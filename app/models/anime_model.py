@@ -101,7 +101,8 @@ class Anime(DataBaseSettings):
 
     @classmethod
     def update_by_id(cls, id, payload):
-        
+        cls.create_table()
+
         cls.get_conn_cur()
 
         columns = [sql.Identifier(key) for key in payload.keys()]

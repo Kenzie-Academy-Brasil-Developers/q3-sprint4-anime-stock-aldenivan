@@ -61,7 +61,7 @@ def update_anime_by_id(id):
         
     update_anime = Anime.serealiaze_anime(update_anime)
 
-    return jsonify(update_anime), HTTPStatus.NO_CONTENT
+    return jsonify(update_anime), HTTPStatus.OK
 
 
 def delete_anime_by_id(id):
